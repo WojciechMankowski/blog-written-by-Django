@@ -1,0 +1,15 @@
+{% extends 'tamplates.html' %} {% block content %}
+<div class="post">
+  <div class="Title">
+    <p>{{ post.Title|upper }}</p>
+  </div>
+  {% if post.published_date %}
+  <div class="date">
+    <p>{{ post.published_date }}</p>
+  </div>
+  {% endif %}
+  <div class="text">
+    <p>{{ post.Body_postu|linebreaksbr }}</p>
+  </div>
+</div>
+{% endblock %}

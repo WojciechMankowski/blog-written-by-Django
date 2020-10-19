@@ -1,0 +1,15 @@
+{% extends 'tamplates.html' %}
+
+{% block content %}
+
+  <div id="form_box">
+    <form  method=post  action=""> {% csrf_token %}
+      {{form.as_p}}
+      <button>Wyślij</button>
+</form >
+  </div>
+  </div>
+  {% endblock %} 
+ 
+
+  

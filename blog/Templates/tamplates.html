@@ -1,0 +1,38 @@
+{% load static %}
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog programisty</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <link rel="stylesheet" href="{% static 'home.css' %}" />
+    <link rel="stylesheet" href="{% static 'forms.css' %}" />
+    <link rel="stylesheet" href="{% static 'post.css' %}" />
+  </head>
+
+  <body>
+    <div id="logo">
+      <p>Blog programisty</p>
+    </div>
+    <nav id="menu">
+      <ul id="Items">
+        <li class="list_item">
+          <a href="/">Home</a>
+        </li>
+        <li class="list_item">
+          <a href="omnie">O mnie</a>
+        </li>
+        <li class="list_item">
+          <a href="kontakt">Kontakt</a>
+        </li>
+        <li class="list_item">
+          <a href="/admin">Zaloguj się</a>
+        </li>
+      </ul>
+    </nav>
+    <div style="clear: both"></div>
+    {% block content %} {% endblock %}
+
+    <!-- <footer>Blog powstał dzięki Django i Pythona</footer> -->
+  </body>
+</html>

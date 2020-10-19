@@ -1,0 +1,26 @@
+{% extends 'tamplates.html' %} 
+{% block content %} 
+<p id="nagłówek"> Najnowże wpisy</p>
+{% if lista_postow %} 
+{% for wpis in lista_postow %}
+<div class="articals">
+  <div class="img">
+    <img src="{{wpis.IMG}}" alt="{{ wpis.Title}}  " />
+  </div>
+  <div id="title">
+    <h3>
+      <a href={{wpis.id}}>{{ wpis.Title|upper }}</a>
+    </h3>
+  </div>
+  <div class="info">
+    <span>{{wpis.Autor}} | {{wpis.published_date}}</span>
+  </div>
+  <div>
+    <span class="zajawka"> {{wpis.Zajawka}} </span>
+  </div>
+</div>  
+{% endfor %}
+{% endif %}
+
+
+{% endblock %}
